@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: linear-gradient(to right,#6fa28a,#1f4037);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 90%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .card{
+    position: relative;
+    width: 340px;
+    height: 430px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgb(0, 0, 0,.5);
+    background-color: #c6d7cf;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    perspective: 1500px;
+    transition: 1.5s;
+}
+.container .card:hover{
+    transform: translateX(50%);
+}
+.container .card .imag-box{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transform-origin: left ; 
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transition: 1.5s ;
+}
+.container .card:hover .imag-box{
+    transform: rotateY(-180deg);
+}
+.container .card .imag-box img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.container .card .imag-box img:nth-child(2){
+    transform: rotateY(180deg);
+    box-shadow: 0 5px 15px rgb(0, 0, 0,.5);
+
+}
+.container .card .details{
+    position: absolute;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.container .card .details h2{
+    margin-bottom:0 ;
+}
+.container .card .details span{
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color:#296c5b;
+}
+.container .card .details .social-icon{
+    display: flex;
+}
+.container .card .details .social-icon a{
+    width: 35px;
+    height: 35px;
+    color: white;
+    display: inline-block;
+    margin: 5px;
+    background-color: rgb(43, 42, 42);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 5px;
+
+}
+.container .card .details .social-icon a:hover{
+    background-color: #6fa28a;
+    color: white;
+    transition: 0.5s;
+}
